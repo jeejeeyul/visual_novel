@@ -1,12 +1,41 @@
 import { story1 } from "./story1.js";
 
-var main_text = document.getElementById("main_text");
+var conversation_box = document.getElementById("conversation_box");
+var bg = document.getElementById("bg");
 var i = 0;
-window.addEventListener("click", function () {
-  if (story1.length != i) {
-    main_text.textContent = "";
+var j = 0;
+var isInterval = false;
 
-    main_text.append(story1[i]);
-    i++;
+class GetOnestep {
+  constructor(story) {
+    this.story = story;
+    this.i = 0;
+    this.j = 0;
+    this.isInterval = false;
+  }
+
+  intervals() {
+    this.isInterval = true;
+    var a = setInterval(() => {
+      if (this.j < this.story[this.i].length) {
+        conversation_box.textContent =
+          conversation_box.textContent + this.story[this.i][this.j];
+        this.j++;
+      } else {
+        this.i++;
+        this.j = 0;
+        this.isInterval = false;
+        clearInterval(a);
+      }
+    }, 100);
+  }
+}
+
+var getone = new GetOnestep(story1);
+
+window.addEventListener("click", function () {
+  if (getone.isInterval == false) {
+    conversation_box.textContent = "";
+    getone.intervals();
   }
 });
