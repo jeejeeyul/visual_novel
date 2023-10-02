@@ -1,4 +1,48 @@
 export var story1 = [
+  {
+    names: "",
+    lines: "세상에 탑이 솟았다.",
+    bg: "https://i.namu.wiki/i/n2naynybj-jK-n8hyVCdtwJdBgtsMkjeEMWMwiRAfWJLZoQitKR2jejnOahV1mJg-G3__wSMmjaqIBmEKoNHnw.webp",
+  },
+  { names: "", lines: "하나가 아닌, 여러채." },
+  { names: "", lines: "각 나라의 수도, 그 중심지에 갑자기 생긴 낡은 탑은" },
+  { names: "", lines: "사람들의 관심을 끌기에는 충분 했지만," },
+  {
+    names: "",
+    lines:
+      "그저 문제 하나 덩그러니 놓여져있는 1층 뿐인 탑은 별거 없는 만큼 별거 아닌듯이 잊혀졌다.",
+  },
+  {
+    names: "",
+    lines: "하지만 그 곳에 있는 문제는 밖으로 기록, 기억 될 수 없다는 것과,",
+  },
+  {
+    names: "",
+    lines:
+      "수도 한복판에 철거가 불가능하게 세워진 탑은 각 나라의 골칫 거리가 되기엔 충분 했고, 지금도 각 나라는 그 탑의 정보를 모으기 위해 힘쓰고 있다.",
+  },
+  { names: "", lines: "탑이 세워지고 4년 9개월 뒤." },
+  { names: "인하", lines: "...야" },
+  { names: "설화", lines: `니 자꾸 누나한태 '야'라고 할거냐?` },
+  { names: "", lines: `한 남매가 소파에 기대어 TV를 보고있다` },
+  {
+    names: "",
+    lines: `물론 그저 배경음악 처럼 켜놓고 스마트폰 두들기는 것이나 다름 없었다.`,
+  },
+  {
+    names: "인하",
+    lines: `"...강설이 니도 동생이라고 안하잖어"`,
+    bg: "https://static.hyundailivart.co.kr/upload_ctn/board/ME00000036/B000007995/tplt/0000129073_ImgPath.jpg/dims/autorotate/on",
+  },
+  { names: "설화", lines: `"내가 너한테 존칭 쓸 짬이냐 임마?"` },
+  { names: "인하", lines: `"...댁이랑 저 겨우 30분 차이거든요?"` },
+  { names: "설화", lines: `"뭐래 먼저 나온 사람이 위다!"` },
+  { names: "인하", lines: `"...좋을대로 해"` },
+  { names: "", lines: `설화는 자신이 누나라며 으스댔지만` },
+  { names: "", lines: `인하는 똑같이 신경도 쓰지 않는다.` },
+];
+
+export var story = [
   "세상에 탑이 솟았다.",
   "하나가 아닌, 여러채.",
   "각 나라의 수도, 그 중심지에 갑자기 생긴 낡은 탑은",

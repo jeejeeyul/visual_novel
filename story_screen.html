@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1.0"
+    />
     <link rel="stylesheet" href="./styles/main_text.css" />
     <title>Document</title>
   </head>
@@ -14,13 +17,19 @@
       user-select: none;
     "
   >
-    <div id="bg">
+    <div id="bg_container">
+      <div class="smallBtn" id="exit"></div>
+      <div class="smallBtn" id="backlog"></div>
+      <div class="smallBtn" id="fullsize"></div>
+
       <div id="main_container">
         <!-- 검은 박스임 -->
-        <div id="name_box"><!-- 이름 들어가는 부분 --></div>
+        <div id="name_box"><!-- 이름 들어가는 부분 -->임시 텍스트</div>
         <div id="conversation_box"><!-- 대사 들어가는 부분 --></div>
       </div>
     </div>
+    <div id="bg"></div>
     <script src="./src/main_text.js" type="module"></script>
+    <script src="./src/main_events.js" type="module"></script>
   </body>
 </html>
