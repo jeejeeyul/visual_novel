@@ -22,36 +22,40 @@ class GetOnestep {
   }
 
   getNames() {
-    name_box.textContent = "";
-    name_box.textContent = this.story[this.i].names;
+    if (typeof this.story[this.i].names == "string") {
+      name_box.textContent = "";
+      name_box.textContent = this.story[this.i].names;
+    }
   }
 
   intervals() {
-    this.isInterval = true;
-    this.isSkip = false;
-    var a = setInterval(() => {
-      if (this.isSkip == true) {
-        conversation_box.textContent =
-          conversation_box.textContent +
-          this.story[this.i].lines.slice(
-            this.j,
-            this.story[this.i].lines.length
-          );
-        clearInterval(a);
-        this.isInterval = false;
-        this.j = 0;
-        this.i++;
-      } else if (this.j < this.story[this.i].lines.length) {
-        conversation_box.textContent =
-          conversation_box.textContent + this.story[this.i].lines[this.j];
-        this.j++;
-      } else {
-        this.i++;
-        this.j = 0;
-        this.isInterval = false;
-        clearInterval(a);
-      }
-    }, 100);
+    if (typeof this.story[this.i].names == "string") {
+      this.isInterval = true;
+      this.isSkip = false;
+      var a = setInterval(() => {
+        if (this.isSkip == true) {
+          conversation_box.textContent =
+            conversation_box.textContent +
+            this.story[this.i].lines.slice(
+              this.j,
+              this.story[this.i].lines.length
+            );
+          clearInterval(a);
+          this.isInterval = false;
+          this.j = 0;
+          this.i++;
+        } else if (this.j < this.story[this.i].lines.length) {
+          conversation_box.textContent =
+            conversation_box.textContent + this.story[this.i].lines[this.j];
+          this.j++;
+        } else {
+          this.i++;
+          this.j = 0;
+          this.isInterval = false;
+          clearInterval(a);
+        }
+      }, 80);
+    }
   }
 }
 
