@@ -1,4 +1,4 @@
-import { story1 } from "./story1.js";
+import { story1, story2, story3, story4 } from "./story1.js";
 
 var conversation_box = document.getElementById("conversation_box");
 var name_box = document.getElementById("name_box");
@@ -15,21 +15,26 @@ class GetOnestep {
   }
 
   getBackgroundimage() {
-    console.log(typeof this.story[this.i].bg);
-    if (typeof this.story[this.i].bg == "string") {
+    if (
+      typeof this.story[this.i].bg == "string" &&
+      this.story[this.i].bg.length > 0
+    ) {
       bg.style.backgroundImage = `url(${this.story[this.i].bg})`;
     }
   }
 
   getNames() {
     if (typeof this.story[this.i].names == "string") {
-      name_box.textContent = "";
+      if (this.story[this.i].names.length > 0) {
+        name_box.textContent = "";
+      }
       name_box.textContent = this.story[this.i].names;
     }
   }
 
   intervals() {
-    if (typeof this.story[this.i].names == "string") {
+    if (typeof this.story[this.i].lines == "string") {
+      conversation_box.textContent = "";
       this.isInterval = true;
       this.isSkip = false;
       var a = setInterval(() => {
@@ -59,7 +64,7 @@ class GetOnestep {
   }
 }
 
-var getone = new GetOnestep(story1);
+var getone = new GetOnestep(story4);
 
 bg_container.addEventListener(
   "click",
@@ -67,7 +72,6 @@ bg_container.addEventListener(
     if (getone.isInterval == false) {
       getone.getNames();
       getone.getBackgroundimage();
-      conversation_box.textContent = "";
       getone.intervals();
     } else {
       getone.isSkip = true;
