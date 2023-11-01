@@ -1,7 +1,12 @@
-var playerName = "김인서";
+var playerName = "hello";
+var playerbasic = "./img/1.jpg";
+var playersurprised = "./img/2.jpg";
+var playersmile = "./img/3.jpg";
+var player;
 
-export var story1 = [
+var story1 = [
   {
+    character: "./img/1.jpg",
     names: `${playerName}`,
     lines: `안녕? 난 이번 학생회장인 ${playerName}이야.`,
   },
@@ -82,7 +87,7 @@ export var story1 = [
   },
 ];
 
-export var story2 = [
+var story2 = [
   {
     names: `${playerName}`,
     lines: `선생님을 불러온다.`,
@@ -117,7 +122,7 @@ export var story2 = [
   },
 ];
 
-export var story3 = [
+var story3 = [
   {
     names: `${playerName}`,
     lines: `후.. 드디어 끝났네.`,
@@ -182,7 +187,7 @@ export var story3 = [
   },
 ];
 
-export var story4 = [
+var story4 = [
   { names: "남주혁", lines: "선생님 저기에요!" },
   { names: "선생님", lines: "너....! 하.." },
   {
@@ -217,6 +222,38 @@ export var story4 = [
   {
     lines: `설렌다.안설렌다;`,
   },
+  { names: `${playerName}`, lines: "그래도.. 술먹는 것도 잡고.." },
+  {
+    lines: `나 자신 장하다!!`,
+  },
+  {
+    names: ``,
+    lines: "양아치 친구들은 징계를 세게 먹었다고 한다~~",
+  },
+  { names: `${playerName}`, lines: "오늘 급식.. 별로다.." },
+  {
+    lines: `매점 갈까.. 말까..`,
+  },
+  {
+    names: "",
+    lines: "주인공이 로비를 서성인다.",
+  },
+  {
+    names: "이한결",
+    lines: "저기..선배..",
+  },
+  { names: "이한결", lines: "이거 드세욧..!" },
+  { names: `${playerName}`, lines: "ㅇ..어..?" },
+  { lines: "저..저기!" },
+  {
+    names: "",
+    lines: `${playerName}이/가 불러보지만, 이한결은 이미 가고 없다.`,
+  },
+  { names: `${playerName}`, lines: "뭐지..?" },
+  { lines: "우와.. 초콜릿이네.." },
+  { lines: "뻬로로쉐잖아..! 맛있겠다." },
+  { lines: "(냠냠)" },
+  { names: "남주혁", lines: "헤이~ 꼬맹아" },
 ];
 
 /*  {
@@ -235,3 +272,5 @@ const result = {
 
 console.log(result);}*/
 // 기본적으로 안 쓴 속성은 위에서 승계됨. 공백 표시하려면 ""쓰면 됨
+
+export var stories = [story1, story2, story3, story4];
