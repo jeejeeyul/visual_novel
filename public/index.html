@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1.0"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="./styles/main_text.css" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then((reg) => {
+          console.log("ServiceWorker register complete", reg);
+        });
+      }
+    </script>
+    <title>CHAME_NOVEL</title>
+  </head>
+  <body
+    style="
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    "
+  >
+    <div id="root"></div>
+    <div id="screen_sizing">
+      <div id="bg_container">
+        <div class="smallBtn" id="exit"></div>
+        <div class="smallBtn" id="backlog"></div>
+        <div class="smallBtn" id="fullsize"></div>
+        <div id="character_box"></div>
+        <div id="main_container">
+          <!-- 검은 박스임 -->
+          <div id="name_box"><!-- 이름 들어가는 부분 --></div>
+          <div id="conversation_box"><!-- 대사 들어가는 부분 --></div>
+        </div>
+      </div>
+      <div id="bg"></div>
+    </div>
+
+    <script src="./src/main_text.js" type="module"></script>
+    <script src="./src/main_events.js" type="module"></script>
+    <script src="./src/screen_settings.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+    <script>
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "firebase/app";
+      import { getAnalytics } from "firebase/analytics";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDEOx9azZgf-LZdzbCa-yxUfRlfnrwUKnU",
+        authDomain: "chiak-visual-novel.firebaseapp.com",
+        projectId: "chiak-visual-novel",
+        storageBucket: "chiak-visual-novel.appspot.com",
+        messagingSenderId: "375214542806",
+        appId: "1:375214542806:web:f58c0098d8c00ea52c1e77",
+        measurementId: "G-NQHM1S5LLG",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
