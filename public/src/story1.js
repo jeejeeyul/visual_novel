@@ -1,11 +1,11 @@
-var playerName = "hello";
-var playerbasic = "./img/1.jpg";
-var playersurprised = "./img/3.jpg";
-var playersmile = "./img/3.jpg";
+var playerName = prompt("이름을 정해주세요!");
+var nam1 = "./images/1.png";
+var seo1 = "./images/5.png";
+var jang1 = "./images/9.png";
 
 var story1 = [
   {
-    character: "./img/1.jpg",
+    character: "",
     names: `${playerName}`,
     lines: `안녕? 난 이번 학생회장인 ${playerName}이야.`,
   },
@@ -55,25 +55,29 @@ var story1 = [
     lines: `양아치 친구들이 모여 담배를 피고있다. (학교 구석진 곳)`,
   },
   {
-    names: `장서은`,
+    names: "장서은",
+    character: jang1,
     lines: `ㅎㅇㅎㅇ`,
   },
   {
     lines: `뭐야... 나빼고 벌써 담타임..?`,
   },
   {
-    names: `안정아`,
+    names: "안정아",
+    character: "",
     lines: `야~ 이 x야 왜케 늦게 옴??`,
   },
   {
-    names: `김지호`,
+    names: "김지호",
+    character: "",
     lines: `ㅋㅋㅋㅋㅋ`,
   },
   {
     lines: `한대 하실?`,
   },
   {
-    names: `안정아`,
+    names: "안정아",
+    character: "",
     lines: `ㅇㅋ ㄱ~`,
   },
   {
@@ -105,6 +109,7 @@ var story2 = [
   },
   {
     names: "",
+    character: "",
     lines: `그렇게 양아치들은 선생님께 끌려가 징계 처분을 받았다.`,
   },
   {
@@ -117,6 +122,7 @@ var story2 = [
   },
   {
     names: "",
+    character: "",
     lines: `그렇게 ${playerName}은 자신의 공약을 실현했다!!`,
   },
 ];
@@ -132,6 +138,7 @@ var story3 = [
   },
   {
     names: "",
+    character: "",
     lines: `시끌시끌 주변 공원에서 시끄러운 소리가 들려온다.`,
   },
   {
@@ -143,19 +150,23 @@ var story3 = [
     lines: `공원에서 나는 것 같은데...?`,
   },
   {
-    names: `남주혁`,
+    names: "남주혁",
+    character: nam1,
     lines: `야~ 같이 가자.`,
   },
   {
-    names: `남주혁`,
+    names: "남주혁",
+    character: nam1,
     lines: `음...? 근데 이게 무슨 소리람??`,
   },
   {
-    names: `남주혁`,
+    names: "남주혁",
+    character: nam1,
     lines: `저기서 나는 것 같은데??`,
   },
   {
     names: "",
+    character: "",
     lines: `남주혁이 소리나는 쪽으로 신나게 발걸음을 옮긴다.`,
   },
   {
@@ -163,19 +174,21 @@ var story3 = [
     lines: `야..! 같이 가~!!`,
   },
   {
-    names: `남주혁`,
+    names: "남주혁",
+    character: nam1,
     lines: `빨리 와라. 꼬맹아~`,
   },
   { names: `${playerName}`, lines: "너어~ 나 꼬맹이 아닌거든!" },
   {
     names: "",
+    character: "",
     lines: `그때 남주혁이 갑자기 멈춰선다.`,
   },
   { names: `${playerName}`, lines: "아! 부딫혔잖아" },
   {
     lines: `뭐야... !!!`,
   },
-  { names: "남주혁", lines: "야.. 재네 술마시는데..?" },
+  { names: "남주혁", character: nam1, lines: "야.. 재네 술마시는데..?" },
   { names: `${playerName}`, lines: "..." },
   {
     lines: `하.. 쟤네 아까 술마시던 애들이네??
@@ -187,8 +200,8 @@ var story3 = [
 ];
 
 var story4 = [
-  { names: "남주혁", lines: "선생님 저기에요!" },
-  { names: "선생님", lines: "너....! 하.." },
+  { names: "남주혁", character: nam1, lines: "선생님 저기에요!" },
+  { names: "선생님", character: "", lines: "너....! 하.." },
   {
     lines: `담배를 안피우니까 술을 마시니?`,
   },
@@ -197,20 +210,28 @@ var story4 = [
   },
   { names: "양아치들", lines: `하... (${playerName}을 째려본다)` },
   { names: `${playerName}`, lines: "(주춤한다)" },
-  { names: "남주혁", lines: `괜찮아. (${playerName}의 손을 꼭 잡아준다)` },
+  {
+    names: "남주혁",
+    character: nam1,
+    lines: `괜찮아. (${playerName}의 손을 꼭 잡아준다)`,
+  },
   { names: `${playerName}`, lines: "(설렌다, 안설렌다)" },
-  { names: "남주혁", lines: "오늘은 집에 데려다 줄게. 가자 꼬맹아." },
+  {
+    names: "남주혁",
+    character: nam1,
+    lines: "오늘은 집에 데려다 줄게. 가자 꼬맹아.",
+  },
   { names: `${playerName}`, lines: "너...!" },
   {
     lines: `  꼬맹이 아니라니까...`,
   },
-  { names: "남주혁", lines: "알겠어 ㅎ" },
-  { names: "남주혁", lines: "가기 전에.." },
+  { names: "남주혁", character: nam1, lines: "알겠어 ㅎ" },
+  { names: "남주혁", character: nam1, lines: "가기 전에.." },
   {
     lines: `자..! 이거 먹어`,
   },
   { names: `${playerName}`, lines: "이게 뭔데?" },
-  { names: "남주혁", lines: "마카롱." },
+  { names: "남주혁", character: nam1, lines: "마카롱." },
   {
     lines: `오늘 힘든 일 많았으니까.`,
   },
@@ -235,6 +256,7 @@ var story4 = [
   },
   {
     names: "",
+    character: "",
     lines: "주인공이 로비를 서성인다.",
   },
   {
@@ -246,25 +268,28 @@ var story4 = [
   { lines: "저..저기!" },
   {
     names: "",
+    character: "",
     lines: `${playerName}이/가 불러보지만, 이한결은 이미 가고 없다.`,
   },
   { names: `${playerName}`, lines: "뭐지..?" },
   { lines: "우와.. 초콜릿이네.." },
   { lines: "뻬로로쉐잖아..! 맛있겠다." },
   { lines: "(냠냠)" },
-  { names: "남주혁", lines: "헤이~ 꼬맹아" },
+  { names: "남주혁", character: nam1, lines: "헤이~ 꼬맹아" },
   { names: `${playerName}`, lines: `꼬맹이 아니라니까 그러네!!` },
-  { names: "남주혁", lines: "근데~ 저기서 누가 싸운다?!" },
+  { names: "남주혁", character: nam1, lines: "근데~ 저기서 누가 싸운다?!" },
   {
     names: `${playerName}`,
     lines: `뭐?! 당장 가자!`,
   },
   {
     names: "",
+    character: "",
     lines: `주인공이 뛰어가자 남주혁이 뒤따라 간다.`,
   },
   {
     names: "",
+    character: "",
     lines: `운동장 구석에서 양아치들이 서민규를 괴롬히고 있다.`,
   },
   { names: `${playerName}`, lines: "하... 숨차" },
@@ -274,11 +299,11 @@ var story4 = [
   {
     lines: `술, 담배.. 이제는 학폭까지..!`,
   },
-  { names: "남주혁", lines: "하아아.. 힘들다.." },
+  { names: "남주혁", character: nam1, lines: "하아아.. 힘들다.." },
   {
     lines: `같이 좀 가자...`,
   },
-  { names: "서민규", lines: "흑흑.. 돈 없다니까요...!!" },
+  { names: "서민규", character: seo1, lines: "흑흑.. 돈 없다니까요...!!" },
   { names: "김지호", lines: "어~엉? 그래놓고 너 오천원 나왔잖아!" },
   {
     lines: `좋은 말로 할 때 돈 내놔.`,
@@ -286,33 +311,39 @@ var story4 = [
   { names: "안정아", lines: "지호양~ 살살해." },
   { lines: `애가 무서워 하잖아~` },
   { lines: `애기~ 좋은 말로 할 때 주자~?` },
-  { names: "서민규", lines: "없다니까요!! 흑흑흑흑" },
+  { names: "서민규", character: seo1, lines: "없다니까요!! 흑흑흑흑" },
   { names: `${playerName}`, lines: "하.. 너네 그렇게 괴롭히면 좋니!!!!!?" },
-  { names: "장서은", lines: "어머~ 알빠니?" },
+  { names: "장서은", character: jang1, lines: "어머~ 알빠니?" },
   { names: `${playerName}`, lines: "하.. (선생님을 부른다, 안부른다)" },
-  { names: "선생님", lines: "너희 이럴거니!" },
+  { names: "선생님", character: "", lines: "너희 이럴거니!" },
   { lines: `에휴... 따라왓!` },
   { names: `${playerName}`, lines: "이름이 뭐니?" },
-  { names: "서민규", lines: "서민규요. 구해주셔서 감사합니다.." },
+  {
+    names: "서민규",
+    character: seo1,
+    lines: "서민규요. 구해주셔서 감사합니다..",
+  },
   { names: `${playerName}`, lines: "(머리를 쓰담아주며) 수고했어." },
-  { names: "서민규", lines: "(얼굴이 빨개진다)" },
-  { names: "남주혁", lines: "자! 이제 가자!" },
+  { names: "서민규", character: seo1, lines: "(얼굴이 빨개진다)" },
+  { names: "남주혁", character: nam1, lines: "자! 이제 가자!" },
   { lines: `(주인공을 쓰담으며) 잘했어~` },
   { names: `${playerName}`, lines: "<설렌다. 안설렌다>" },
   {
     names: "",
+    character: "",
     lines: `양아치 친구들은 호되게 혼났다고 한다.`,
   },
   { names: `${playerName}`, lines: "여이~ 남주혁!!" },
   { names: `${playerName}`, lines: "같이가자." },
-  { names: "남주혁", lines: "오늘 진짜 수고했다." },
+  { names: "남주혁", character: nam1, lines: "오늘 진짜 수고했다." },
   { names: `${playerName}`, lines: "뭘~!" },
   { lines: `그리고 내가 건 공약을 잘 지키고 있는 것 같아서 좋아!` },
-  { names: "남주혁", lines: "으이구. 하여튼,,," },
+  { names: "남주혁", character: nam1, lines: "으이구. 하여튼,,," },
   { names: `${playerName}`, lines: "그나저나 서민규가 걱정이네..." },
-  { names: "남주혁", lines: "... 괜찮겠지" },
+  { names: "남주혁", character: nam1, lines: "... 괜찮겠지" },
   {
     names: "",
+    character: "",
     lines: `시간이 흐르고.. 어느날`,
   },
   {
@@ -322,10 +353,12 @@ var story4 = [
   { names: `${playerName}`, lines: "감사합니다." },
   {
     names: "",
+    character: "",
     lines: `그렇게 ${playerName}은/는 훌륭하게 학생회장의 역할을 수행하고 멋진 학교를 만들었습니다~`,
   },
   {
     names: "",
+    character: "",
     lines: "끝",
   },
 ];

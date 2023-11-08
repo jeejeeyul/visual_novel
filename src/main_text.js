@@ -5,7 +5,10 @@ var name_box = document.getElementById("name_box");
 var bg = document.getElementById("bg");
 var bg_container = document.getElementById("bg_container");
 var character_box = document.getElementById("character_box");
-setCookie("storynumber", 0, 1);
+
+if (getCookie("storynumber") == null) {
+  setCookie("storynumber", 0, 1);
+}
 
 function setCookie(name, value, exp) {
   var date = new Date();

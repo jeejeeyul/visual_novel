@@ -1,4 +1,4 @@
-var playerName = "hello";
+var playerName = prompt("이름을 정해주세요!");
 var playerbasic = "./img/1.jpg";
 var playersurprised = "./img/3.jpg";
 var playersmile = "./img/3.jpg";

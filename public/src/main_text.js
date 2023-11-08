@@ -5,6 +5,7 @@ var name_box = document.getElementById("name_box");
 var bg = document.getElementById("bg");
 var bg_container = document.getElementById("bg_container");
 var character_box = document.getElementById("character_box");
+
 setCookie("storynumber", 0, 1);
 
 function setCookie(name, value, exp) {
@@ -47,10 +48,7 @@ class GetOnestep {
   }
 
   getCharacter() {
-    if (
-      typeof this.story[this.i].character == "string" &&
-      this.story[this.i].character.length > 0
-    ) {
+    if (typeof this.story[this.i].character == "string") {
       character_box.innerHTML = "";
       character_box.innerHTML = `<img id=character src=${
         this.story[this.i].character

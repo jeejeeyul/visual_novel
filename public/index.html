@@ -6,6 +6,11 @@
       name="viewport"
       content="user-scalable=no, width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./icons/android-launchericon-144-144.png"
+    />
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="./styles/main_text.css" />
     <script>
@@ -28,9 +33,17 @@
     <div id="root"></div>
     <div id="screen_sizing">
       <div id="bg_container">
-        <div class="smallBtn" id="exit"></div>
+        <div class="smallBtn" id="exit" style="font-size: 40%; color: black">
+          시작화면으로
+        </div>
         <div class="smallBtn" id="backlog"></div>
-        <div class="smallBtn" id="fullsize"></div>
+        <div
+          class="smallBtn"
+          id="fullsize"
+          style="font-size: 70%; color: black"
+        >
+          배경
+        </div>
         <div id="character_box"></div>
         <div id="main_container">
           <!-- 검은 박스임 -->
@@ -71,5 +84,6 @@
       firebase.initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
     </script>
+    <script src="./src/story1.js"></script>
   </body>
 </html>
